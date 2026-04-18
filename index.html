@@ -206,7 +206,7 @@
 
   async function loadMapTitle() {
     try {
-      const response = await fetch('map-titles.json', { cache: 'no-store' });
+      const response = await fetch('map-title.json', { cache: 'no-store' });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const titles = await response.json();
       document.getElementById('mapTitleText').textContent = titles[PAGE_KEY] || DEFAULT_MAP_TITLE;
